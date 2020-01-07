@@ -1,0 +1,86 @@
+<!-- 이게 HTML 주석이다~ 이말이야. -->
+<!doctype html>
+<html>
+<head>
+  <title>영화</title>
+  <meta charset="utf-8">
+  <script src="colors.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon" >
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+</head>
+<body>
+  <input type="button" value="night" onclick="nightDayHandler(this);">
+  <h1><a href="index.html">영화</a></h1>
+  <script>
+    var movies = ['살인의 추억', '타짜', '곡성'];
+  </script>
+  <div id="grid">
+  <ol>
+    <script>
+      var i = 0;
+      while (i < movies.length) {
+        document.write('<li><a href="m'+[i+1]+'.html">'+movies[i]+'</a></li>')
+        i = i + 1;
+      }
+    </script>
+  </ol>
+
+  <!-- HTML & CSS와 JavaScript 효율성 비교 -->
+  <!--  <ol>
+      <li><a href="m1.html">살인의 추억</a></li>
+      <li><a href="m2.html">타짜</a></li>
+      <li><a href="m3.html">곡성</a></li>
+    </ol> -->
+
+  <!-- HTML와 CSS의 효율성 비교 -->
+    <!--
+    <h1><a href="index.html"><font color="red">영화</font></a></h1>
+    <ol>
+      <li><a href="m1.html"><font color="red">살인의 추억</font></a></li>
+      <li><a href="m2.html"><font color="red">타짜</font></a></li>
+      <li><a href="m3.html"><font color="red">곡성</font></a></li>
+    -->
+    <div id="article">
+      <h2><a href="https://terms.naver.com/entry.nhn?docId=2275294&cid=42219&categoryId=51141" target="blank" title="영화의 이해" style="color:red">영화의 이해</a></h2>
+      <img src="img\mindex.jpg" width="450"></a>
+      <p style="margin-top:45px; color:green"><!-- 문단위 간격 45px, 문단 색 색 초록-->영화는 우리가 살고 있는 세상에서 가장 영향력이 큰 대중매체라고 할 수 있다. 전 세계에서 하루에도 수백만 명이 영화를 보고 있다. 영화 관람 방식도 영화관만 이용하는 시대는 지났다. 관객들은 다양한 윈도(TV, 인터넷, SNS, 스마트폰, DVD, VOD, 기타 저장장치 등)를 통해 언제 어디서나 영화를 관람하는 시대가 되었다. 영화는 더 이상 취미가 아니라 우리 생활의 일부가 되어 버렸다. 관객들은 저마다 각양각색의 이유로 영화를 관람한다.</p>
+
+      <p>영화는 인간에게 ‘희로애락(喜怒哀樂)’을 선물한다. 영화는 꿈과 희망, 기쁨과 슬픔, 낭만과 사랑, 그리움과 기다림, 시련과 아픔 혹은 악몽과 불안감 등을 반영하여 다양한 형태로 세상에 나와 인간의 삶과 조우한다. 영화를 이해한다는 것은 사람들의 삶을 이해하는 것이다. 그것과 함께 영화가 추구하는 최고의 궁극적 목적은 어떤 형태로든 사람들을 ‘즐겁게’ 하기 위한 것이다. 영화는 쓰임에 따라 다양한 용어로 불리는데 살펴보면 다음과 같다.</p>
+
+      <p><span><strong><u>시네마(Cinema)</u> 영화의 이론적 전달을 부각한 용어<br>
+        <u>필름(Film)</u> 예술, 독립, 작가영화를 지향하는 영화 용어<br>
+        <u>무비(Movie)</u> 일반적인 영화 용어, 상업 영화 전반을 일컫는 용어<br>
+        <u>모션 픽처(Motion Picture)</u> 영화를 산업적으로 통칭할 때 사용하는 용어<br>
+        <u>무빙 이미지(Moving Image)</u> 움직이는 동영상의 모든 것을 일컬을 때 쓰는 용어</strong></span></p>
+
+      <p>영화를 여러 용어로 부르는 것은 영화가 다양한 스펙트럼을 가지고 있기 때문이다. 본 저서 『영화의 이해』는 다양한 ‘영화 특성’을 소개하여, 관객들이 좀 더 재미있게 영화를 즐길 수 있기를 바라는 마음에서 탄생하게 되었다.</p>
+
+      <p>영화 자체를 이해하면 영화를 쉽고 재미있게 즐길 수 있다. 이러한 이유만으로도 영화의 이해는 필요하다.</p>
+    </div>
+  </div>
+
+  <div id="disqus_thread"></div> <!-- 디스커스 댓글기능 -->
+  <script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+    */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://ladjoyz.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <!-- 디스커스 댓글기능 -->
+
+</body>
+</html>
